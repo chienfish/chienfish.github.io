@@ -1,0 +1,181 @@
+.panel {
+  width: 100%;
+}
+
+.panel-inner {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 28px 22px;
+}
+
+/* header: ABOUT pill + About Me */
+.about2-head {
+  margin-bottom: 18px;
+}
+
+.about2-pill {
+  display: inline-flex;
+  align-items: center;
+  height: 28px;
+  padding: 0 10px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  background: rgba(0, 0, 0, 0.06);
+  border-radius: 6px;
+  color: var(--text);
+}
+
+:root[data-theme="dark"] .about2-pill {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.about2-title {
+  margin: 14px 0 0 0;
+  font-size: 44px;
+  line-height: 1.1;
+  font-weight: 800;
+  color: var(--text);
+}
+
+/* photo block */
+.about2-photo {
+  margin-top: 18px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.about2-photo img {
+  display: block;
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+}
+
+/* text */
+.about2-body {
+  margin-top: 18px;
+}
+
+.about2-body p {
+  margin: 0 0 12px 0;
+  color: var(--muted);
+  line-height: 1.85;
+}
+
+/* info grid (左右兩欄) */
+.about2-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 38px;
+}
+
+.about2-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about2-info li {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 14px;
+  padding: 8px 0;
+}
+
+.about2-info .k {
+  font-weight: 800;
+  color: var(--text);
+}
+
+.about2-info .v {
+  color: var(--muted);
+}
+
+/* Check button */
+.about2-actions {
+  margin-top: 8px;
+}
+
+.btn-check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 0 22px;
+  background: 	#111;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+}
+
+:root[data-theme="dark"] .btn-check {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.btn-check:hover {
+  opacity: 0.92;
+}
+
+/* RWD */
+@media (max-width: 820px) {
+  .about2-title {
+    font-size: 38px;
+  }
+
+  .about2-photo img {
+    height: 280px;
+  }
+
+  .about2-info {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .about2-info li {
+    grid-template-columns: 110px 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .panel-inner {
+    max-width: none;
+    width: 100%;
+    padding: 16px 8px;
+  }
+
+  .about2-title {
+    font-size: 32px;
+  }
+
+  .about2-photo {
+    margin-top: 14px;
+    border-radius: 10px;
+  }
+
+  .about2-photo img {
+    height: 240px;
+  }
+
+  .about2-body p {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .about2-info {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .about2-info li {
+    grid-template-columns: 96px 1fr;
+    gap: 10px;
+    padding: 6px 0;
+  }
+
+  .btn-check {
+    width: 100%;
+  }
+}

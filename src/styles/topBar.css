@@ -1,0 +1,48 @@
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 56px;
+  background: #111;
+  color: #fff;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  z-index: 100;
+}
+
+.topbarInner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 18px;
+}
+
+.topbarLeft {
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  color: #fff;
+}
+
+.topbarMenuBtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.16);
+  background: rgba(255,255,255,0.06);
+  color: #fff;
+  display: none;              /* 桌機不顯示 */
+  place-items: center;
+  cursor: pointer;
+}
+
+.topbarMenuBtn:hover {
+  background: rgba(255,255,255,0.10);
+}
+
+/* 手機顯示 menu */
+@media (max-width: 576px) {
+  .topbarMenuBtn {
+    display: grid;
+  }
+}
