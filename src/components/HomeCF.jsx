@@ -11,9 +11,20 @@ export default function HomeCF() {
       </div>
 
       <div className="cf-Intro">
-        <h1 className="cf-Name">Chien-Yu (Laura) Lin</h1>
+        {/* <h1 className="cf-Name">Chien-Yu (Laura) Lin</h1> */}
 
-        <div className="cf-TypingRow">
+        <div className="cf-Name">
+          <TypeAnimation
+            sequence={["Chien-Yu (Laura) Lin", 1200, "Chien-Yu (Laura) Lin", 1200]}
+            wrapper="span"
+            speed={45}
+            repeat={Infinity}
+            className="cf-Typing"
+          />
+          <span className="cf-Cursor">|</span>
+        </div>
+
+        {/* <div className="cf-TypingRow">
           <TypeAnimation
             sequence={["Backend Systems", 1200, "Distributed Systems", 1200, "Scalable APIs", 1200, "Cloud Infrastructure", 1200]}
             wrapper="span"
@@ -22,7 +33,7 @@ export default function HomeCF() {
             className="cf-Typing"
           />
           <span className="cf-Cursor">|</span>
-        </div>
+        </div> */}
 
         <p className="cf-Desc">
           M.S. Student in Engineering Science & Ocean Engineering (IT) @ NTU
